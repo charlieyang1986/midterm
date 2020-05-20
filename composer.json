@@ -1,0 +1,12 @@
+{
+  "name": "chunhai/328/midterm",
+  "authors": [
+    {
+          "name": "Chunhai Yang",
+          "email": "cyang21@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
