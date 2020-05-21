@@ -14,7 +14,7 @@
             <label for="name" class="col-sm-2 control-label">Name</label>
 
             <div class="col-sm-4">
-                <input class="form-control" type="text" name="name" id="name">
+                <input class="form-control" type="text" name="name" id="name" value="{{ @name }}">
                 <span class="err">
                     <check if="{{ isset(@errors['name']) }}">
                         {{ @errors['name'] }}
@@ -30,12 +30,20 @@
                 <repeat group="{{ @options }}" value="{{ @option }}">
                     <label><input type="checkbox"
                                   name="options[]"
-                                  value="{{ @option }}"> {{ (@option) }}</label><br>
+                                  value="{{ @option }}"
+                        <check if="{{ @option == @selectedOption }}" >
+                            checked="checked"
+                        </check>
+
+                    > {{ @option }}
+
+                   </input></label><br>
                 </repeat>
                 <span class="err">
                     <check if="{{ isset(@errors['options']) }}">
                         {{ @errors['options'] }}
                     </check>
+
                 </span>
             </div>
         </div>

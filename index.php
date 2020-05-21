@@ -62,10 +62,9 @@ $f3->route('GET|POST /survey', function($f3) {
 
     }
 
-
-    $f3->set('options', $options);
+   $f3->set('options', $options);
     $f3->set('name', $_POST['name']);
-    $f3->set('option', $_POST['options']);
+    $f3->set('selectedOption', $_POST['option']);
 
 
     $view = new Template();
