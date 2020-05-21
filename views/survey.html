@@ -15,7 +15,13 @@
 
             <div class="col-sm-4">
                 <input class="form-control" type="text" name="name" id="name">
+                <span class="err">
+                    <check if="{{ isset(@errors['name']) }}">
+                        {{ @errors['name'] }}
+                    </check>
+                </span>
             </div>
+
         </div>
         <!-- get option -->
         <div class="form-group">
@@ -24,8 +30,13 @@
                 <repeat group="{{ @options }}" value="{{ @option }}">
                     <label><input type="checkbox"
                                   name="options[]"
-                                  value="{{ @option }}"> {{ ucfirst(@option) }}</label><br>
+                                  value="{{ @option }}"> {{ (@option) }}</label><br>
                 </repeat>
+                <span class="err">
+                    <check if="{{ isset(@errors['options']) }}">
+                        {{ @errors['options'] }}
+                    </check>
+                </span>
             </div>
         </div>
 
