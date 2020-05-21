@@ -1,5 +1,9 @@
 <?php
-
+/*
+ * Name: Chunhai Yang
+ * IT328
+ * midterm survey
+ */
 //Turn on error reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
