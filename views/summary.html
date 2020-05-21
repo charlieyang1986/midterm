@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <include href="includes/header.htm"></include>
+</head>
+<body>
+<div class="container">
+    <h1>Midterm Survey</h1>
+    <p>Thank you for taking the survey, {{ @SESSION.name }} !</p>
+    <check if="{{ isset(@SESSION.options) }}">
+        <p>Your Answers:  {{ implode(@SESSION.options, ", ") }}</p>
+    </check>
+
+</div>
+</body>
+</html>
